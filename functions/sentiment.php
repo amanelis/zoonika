@@ -1,9 +1,17 @@
 <?PHP
+/***********microtime_float()***********
+purpose: starts a time counter to calculate
+time spent processing one sentiment analysis
+***************************************/
 function microtime_float() {
     list($usec, $sec) = explode(" ", microtime());
     return ((float)$usec + (float)$sec);
 }
 
+/*******printArray($input_array)***********
+purpose: takes a single [] array as input 
+and simply prints it formatted nicely
+***************************************/
 function printArray($input_array) {
 	if(empty($input_array)){
 		echo 'FUNCTION ERROR: printArray($input_array), param array looks to be empty or null.<br />';
@@ -15,6 +23,11 @@ function printArray($input_array) {
 	echo "</pre>";
 }
 
+/*******fileToArray($file)***********
+purpose: takes in a file path param,
+parses the file and puts each line in
+array as one entry, i.e., [0] = 'word'..
+***************************************/
 function fileToArray($file) {
 	if(empty($file)){
 		echo 'FUNCTION ERROR: fileToArray($file), param file looks to be empty or null.<br />';
@@ -32,6 +45,16 @@ function fileToArray($file) {
 	return $file_array;
 }
 
+/*******fileToTwoDArray($file)***********
+purpose: takes in a file path param,
+parses the file and puts each line in
+array as one entry, and stores a word count
+i.e., [0] => Array
+        (
+            [word] => abrasive
+            [count] => 0
+        )
+***************************************/
 function fileToTwoDArray($file) {
 	if(empty($file)){
 		echo 'FUNCTION ERROR: fileToTwoDArray($file), param file looks to be empty or null.<br />';
@@ -122,7 +145,7 @@ function tokenizeSentence($sentence){
 Function takes in a sentence and does 
 sentiment analysis on it.
 @return: sentiment analysis report
-@params: pass in a sentence, it will tokenize
+@params: pass in a sentence, it will tokenize, pass in a search term
 */
 function sentimentAnalysis_1($sentence, $search) {
 	if(empty($sentence)){

@@ -1,4 +1,4 @@
-<?PHP
+<?php
 //////////MUST INCLUDE TO WORK/////////
 /*************************************/
 //include config file
@@ -20,14 +20,12 @@ require_once('functions/scrape.php');
 require_once('functions/sentiment.php');
 /*************************************/
 
-/* MAIN PROGRAM */
-$search = 'avatar';
-$result = 100;
-$search_output = twitter_search($search, $result);
 
-foreach ($search_output as $term){ 
-	sentimentAnalysis_1($term[tweet], $search);
-}
+$myfile = 'diction/adj_neg.txt';
+$filear = fileToTwoDArray($myfile);
+
+printArray($filear);
+
 
 
 ?>
