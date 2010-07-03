@@ -10,4 +10,5 @@ To invoke the twitter bot there are several tasks that must be setup. First if y
 
 1) To start using the twitter bot (Teabot) open the ztbot.php file in the root of the app and edit line 21. Change the search term to whatever you want your bot to watch for.
   $search = 'tea';
- 
+
+2) Just below this line on 22, you will see there is a function call to sendTweets(param = your search term). This function (kind of self explanatory), will take your search term (as defined on line 21), and will look in either your database for tweet responses.
