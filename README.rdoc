@@ -1,0 +1,7 @@
+== CUZTbot Example
+
+Example app using this program: http://z2.zootzy.com/ztbot/ type files according to path
+
+== Installation
+
+Setup database to your discretion, for no tables right now are being used. Make sure your paths are absolute to your domain
