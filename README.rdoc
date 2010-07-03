@@ -8,5 +8,5 @@ To configure, first edit config/config.inc.php, this file will contain your bots
 == Basic USAGE - Teabot
 To invoke the twitter bot there are several tasks that must be setup. First if you will be running in cron, you must set a cron job to call this file every few minutes. You must be carefull as to how many times and tweets you actually output do to twitter status update limits. That information can be found here: http://help.twitter.com/entries/15364 
 
-  search = 'tea';
+  $search = 'tea';
  
