@@ -3,5 +3,11 @@
 Example app using this program: http://z2.zootzy.com/ztbot/ type files according to path
 
 == Installation
-To configure, first edit config/config.inc.php, this file will contain your bots username/password, change this to yours.
-Next few lines contain your database information, enter this in, will be used later on.
+To configure, first edit config/config.inc.php, this file will contain your bots username/password, change this to yours. Next few lines contain your database information, enter this in, will be used later on.
+
+== Basic USAGE - Teabot
+To invoke the twitter bot there are several tasks that must be setup. First if you will be running in cron, you must set a cron job to call this file every few minutes. You must be carefull as to how many times and tweets you actually output do to twitter status update limits. That information can be found here: http://help.twitter.com/entries/15364 
+
+* Edit your search term that the bot will be searching for on line: 21, change this to anything you want the bot to search for, should look like this:
+  $search = 'tea';
+  
