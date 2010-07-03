@@ -3,5 +3,5 @@
 Example app using this program: http://z2.zootzy.com/ztbot/ type files according to path
 
 == Installation
-
-Setup database to your discretion, for no tables right now are being used. Make sure your paths are absolute to your domain
+To configure, first edit config/config.inc.php, this file will contain your bots username/password, change this to yours.
+Next few lines contain your database information, enter this in, will be used later on.
