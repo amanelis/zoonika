@@ -31,4 +31,14 @@ With the twitter bot, you are given plenty of functions to do anything a regular
 4) Send Tweets. Params: String, search term you want to respond to. File function/scrape.php
   sendTweets($search_term);
 
+== Basic USAGE - Sentiment Analysis
+1) To invoke the sentiment analysis functions to analyze tweets (or sentences of your choice) simply follow the code below in the sent.php file in the root
+  $search = 'avatar';
+  $result = 100;
+  $search_output = twitter_search($search, $result);
 
+  foreach ($search_output as $term){
+          sentimentAnalysis_1($term[tweet], $search);
+  }
+
+2)

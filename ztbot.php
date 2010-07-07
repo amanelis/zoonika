@@ -21,6 +21,5 @@ require_once('functions/sentiment.php');
 $search = 'tea';
 //sendTweets($search);
 
-echo hourly_hits_left();
-printArray(twitterUserInformation('amanelis'));
+
 ?>
