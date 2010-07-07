@@ -22,6 +22,5 @@ $search = 'tea';
 //sendTweets($search);
 
 echo hourly_hits_left();
-
-echo Follow_User('amanelis');
+printArray(twitterUserInformation('amanelis'));
 ?>

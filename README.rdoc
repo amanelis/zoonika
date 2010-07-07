@@ -16,5 +16,18 @@ To invoke the twitter bot there are several tasks that must be setup. First if y
 
 3) Your output will display your Twitter Bot's name, date/time, your response to the users tweet. All the data will be outputted per line. At the bottom will display your search term, and API calls for the hour left.
 
-=== Basic USAGE - Teabot - Functions
+=== Basic Functions
 With the twitter bot, you are given plenty of functions to do anything a regular twitter use can do.
+1) Follow user. Params: String, twitter username. File: functions/scrape.php
+  function Follow_User($screen_name);
+
+2) Recent Metions/Reply. Params: String, twitter username. File: functions/scrape.php
+  function recent_mentions_reply($login);
+
+3) Twitter User Information. Params: String, twitter username. File functions/scrape.php
+  function twitterUserInformation($user);
+
+4) Send Tweets. Params: String, search term you want to respond to. File function/scrape.php
+  sendTweets($search_term);
+
+
