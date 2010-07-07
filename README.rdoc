@@ -8,13 +8,35 @@ To configure, first edit config/config.inc.php, this file will contain your bots
 == Basic USAGE - Teabot
 To invoke the twitter bot there are several tasks that must be setup. First if you will be running in cron, you must set a cron job to call this file every few minutes. You must be carefull as to how many times and tweets you actually output do to twitter status update limits. That information can be found here: http://help.twitter.com/entries/15364 
 
-1) To start using the twitter bot (Teabot) open the ztbot.php file in the root of the app and edit line 21. Change the search term to whatever you want your bot to watch for.
+1)Includes you must have. If you look in the root at ztbot.php you will see the files need to use the bot.
+  //////////MUST INCLUDE TO WORK/////////
+  /*************************************/
+  //include config file
+  require_once("config/config.inc.php");
+
+  //include the dom class
+  require_once("classes/dom.class.php");
+
+  //include twitter api class
+  require_once("classes/twit.class.php");
+
+  //include the twitter API
+  require_once("functions/twitter.standard.php");
+
+  //include the scrapper class
+  require_once('functions/scrape.php');
+
+  //include the sentiment analysis class
+  require_once('functions/sentiment.php');
+  /*************************************/
+
+2) To start using the twitter bot (Teabot) open the ztbot.php file in the root of the app and edit line 21. Change the search term to whatever you want your bot to watch for.
   $search = 'tea';
 
-2) Just below this line on 22, you will see there is a function call to sendTweets(param = your search term). This function (kind of self explanatory), will take your search term (as defined on line 21), and will look in either your database for tweet responses.
+3) Just below this line on 22, you will see there is a function call to sendTweets(param = your search term). This function (kind of self explanatory), will take your search term (as defined on line 21), and will look in either your database for tweet responses.
   sendTweets($search);
 
-3) Your output will display your Twitter Bot's name, date/time, your response to the users tweet. All the data will be outputted per line. At the bottom will display your search term, and API calls for the hour left.
+4) Your output will display your Twitter Bot's name, date/time, your response to the users tweet. All the data will be outputted per line. At the bottom will display your search term, and API calls for the hour left.
 
 === Basic Functions
 With the twitter bot, you are given plenty of functions to do anything a regular twitter use can do.
