@@ -41,4 +41,4 @@ With the twitter bot, you are given plenty of functions to do anything a regular
           sentimentAnalysis_1($term[tweet], $search);
   }
 
-2)
+2)Output will display the tweet, process time, how many words it did an analysis on, and finally the result: pos, neg, neu depending on what the analysis concludes. The main sentimentAnalysis_1() can be found in functions/sentiment.php. There will be more iterations of this function later on through development. In functions/sentiment.php you can also find some usefull array printing/parsing/tokenizing functions, that the sentimentAnalysis_1() heavily depends on to parse tweets(sentences).
