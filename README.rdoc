@@ -12,3 +12,5 @@ To invoke the twitter bot there are several tasks that must be setup. First if y
   $search = 'tea';
 
 2) Just below this line on 22, you will see there is a function call to sendTweets(param = your search term). This function (kind of self explanatory), will take your search term (as defined on line 21), and will look in either your database for tweet responses.
+  sendTweets($search);
+
