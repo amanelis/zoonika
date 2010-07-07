@@ -15,3 +15,6 @@ To invoke the twitter bot there are several tasks that must be setup. First if y
   sendTweets($search);
 
 3) Your output will display your Twitter Bot's name, date/time, your response to the users tweet. All the data will be outputted per line. At the bottom will display your search term, and API calls for the hour left.
+
+=== Basic USAGE - Teabot - Functions
+With the twitter bot, you are given plenty of functions to do anything a regular twitter use can do.

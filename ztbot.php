@@ -19,5 +19,9 @@ require_once('functions/sentiment.php');
 
 /* MAIN PROGRAM */
 $search = 'tea';
-sendTweets($search);
+//sendTweets($search);
+
+echo hourly_hits_left();
+
+echo Follow_User('amanelis');
 ?>
