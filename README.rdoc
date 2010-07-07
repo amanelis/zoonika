@@ -14,3 +14,4 @@ To invoke the twitter bot there are several tasks that must be setup. First if y
 2) Just below this line on 22, you will see there is a function call to sendTweets(param = your search term). This function (kind of self explanatory), will take your search term (as defined on line 21), and will look in either your database for tweet responses.
   sendTweets($search);
 
+3) Your output will display your Twitter Bot's name, date/time, your response to the users tweet. All the data will be outputted per line. At the bottom will display your search term, and API calls for the hour left.
