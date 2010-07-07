@@ -18,6 +18,7 @@ To invoke the twitter bot there are several tasks that must be setup. First if y
 
 === Basic Functions
 With the twitter bot, you are given plenty of functions to do anything a regular twitter use can do.
+
 1) Follow user. Params: String, twitter username. File: functions/scrape.php
   function Follow_User($screen_name);
 
