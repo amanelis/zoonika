@@ -32,7 +32,7 @@ With the twitter bot, you are given plenty of functions to do anything a regular
   sendTweets($search_term);
 
 == Basic USAGE - Sentiment Analysis
-1) To invoke the sentiment analysis functions to analyze tweets (or sentences of your choice) simply follow the code below in the sent.php file in the root
+1) To invoke the sentiment analysis functions to analyze tweets (or sentences of your choice) simply follow the code below in the sent.php file in the root. To start with this code. You first choose a search term. Specify how many results you want to return. The max I believe is 150 from the API limit. The third line in this snippet searches the twitter stream by means of returning a two dimensional array of [tweet result #] -> [user][tweet], this can easily be parsed by the foreach loop, then passing that data to sentiment analysis function.
   $search = 'avatar';
   $result = 100;
   $search_output = twitter_search($search, $result);
