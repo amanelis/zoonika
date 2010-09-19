@@ -21,7 +21,7 @@ require_once('functions/sentiment.php');
 /*************************************/
 
 /* MAIN PROGRAM */
-$search = 'avatar';
+$search = 'obama';
 $result = 100;
 $search_output = twitter_search($search, $result);
 

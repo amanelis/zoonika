@@ -38,9 +38,9 @@ function fileToArray($file) {
 	$file_array = array();
 
 	foreach ($lines as $line_num => $line) {
-    	$clean = trim($line);
-    	$file_array[$index] = $clean;
-    	$index++;
+    		$clean = trim($line);
+    		$file_array[$index] = $clean;
+    		$index++;
 	}
 	return $file_array;
 }
@@ -66,9 +66,9 @@ function fileToTwoDArray($file) {
 	
 	foreach ($lines as $line_num => $line) {
 		$clean = trim($line);
-    	$file_array[$index]['word']  = $clean;
-    	$file_array[$index]['count'] = 0;
-    	$index++;
+    		$file_array[$index]['word']  = $clean;
+    		$file_array[$index]['count'] = 0;
+    		$index++;
 	}
 	return $file_array;
 }
@@ -83,6 +83,44 @@ function negativeAdj() {
 	$negative_adjective_array = fileToTwoDArray('diction/adj_neg.txt');
 	sort($negative_adjective_array);
 	return $negative_adjective_array;
+}
+
+/*
+Function takes a sentence, or large body
+of text and tokenizes the input.
+@return: returns a single dimension array of tokens
+@params: string, sentence, char, paragraph
+@comments: maybe use explode() to parse out data
+*/
+function simpleTok($sentence){
+	if(empty($sentence)){
+		echo 'FUNCTION ERROR: parseSentence($sentence), param sentence looks to be empty.<br />';
+		exit(-1);
+	}
+	
+	//use a copy just in case need to reference original sentence
+	$use_sentence = $sentence;
+	trim($use_sentence);
+									        
+	//move to lower case
+	$use_sentence = strtolower($use_sentence);
+
+	//for now we want to delimit all other tokens that are not included in alphabet
+	$delimiters = " ";
+	$tokenize_chars = strtok($use_sentence, $delimiters);
+	
+	//setup array and a ndx
+	$tokenized_sentence_array = array();
+	$index = 0;
+
+	//take out any non alphabetical characters such as :!#~`...
+	while($tokenize_chars !== false) {
+		$tokenized_sentence_array[$index] = $tokenize_chars;
+		$tokenize_chars = strtok($delimiters);
+		$index++;
+	}
+
+	return $tokenized_sentence_array;
 }
 
 /*
@@ -112,14 +150,14 @@ function tokenizeSentence($sentence){
 	//setup array and a ndx
 	$tokenized_sentence_array = array();
 	$index = 0;
-	
+
 	//take out any non alphabetical characters such as :!#~`...
 	while($tokenize_chars !== false) {
 		$tokenized_sentence_array[$index] = $tokenize_chars;
 		$tokenize_chars = strtok($delimiters);
 		$index++;
 	}
-	
+
 	//setup a string variable to hold new tokens
 	$string = "";
 	foreach($tokenized_sentence_array as $token) {
