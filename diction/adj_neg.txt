@@ -119,6 +119,9 @@ ill
 irresolute
 jealous
 jittery
+kill
+killing
+killings
 lack
 lacks
 lacked
@@ -128,6 +131,8 @@ lonely
 malicious
 materialistic
 mean
+murder
+murders
 mysterious
 naive
 nasty
@@ -142,6 +147,9 @@ pathetic
 pessimistic
 possessive
 quarrelsome
+rape
+raped
+rapest
 repulsive
 ruthless
 sad

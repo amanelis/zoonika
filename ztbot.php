@@ -19,9 +19,6 @@ require_once('functions/sentiment.php');
 
 /* MAIN PROGRAM */
 $search = 'tea';
-//sendTweets($search);
-
-$sentence = 'How big do you think I will get @the new era?';
-printArray(simpleTok($sentence));
+sendTweets($search);
 
 ?>

@@ -265,6 +265,16 @@ function sentimentAnalysis_1($sentence, $search) {
 		}
 	}
 	*/
+	if($pos_cnt != 0)
+		//$sentiment_positive = round((($string_count / $ta_sz) / ($pos_cnt)), 2);
+		$sentiment_positive = round(($ta_sz / $pos_cnt), 2);
+	else
+		$sentiment_positive = 0;
+
+	if($neg_cnt !=0)
+		$sentiment_negative = round(($ta_sz / $neg_cnt), 2);
+	else
+		$sentiment_negative = 0;
 	
 	$limit = hourly_hits_left();
 	
@@ -282,6 +292,15 @@ function sentimentAnalysis_1($sentence, $search) {
 	echo "Pos: <strong><font color='green'>$pos_cnt</font></strong><br />"; 
 	echo "Neg: <strong><font color='red'>$neg_cnt</font></strong><br />";
 	echo "Neu: <strong>$neu_cnt</strong><br />";
+	if($pos_cnt > $neg_cnt) {
+		echo "Sentiment: <strong><font color='green'>Positive</font></strong><br />";
+		echo "Sentiment: <strong>$sentiment_positive</strong><br />";
+	} else if ($neg_cnt > $pos_cnt) {
+        echo "Sentiment: <strong><font color='red'>Negative</font></strong><br />";
+		echo "Sentiment: <strong>$sentiment_negative</strong><br />";
+	} else {
+		echo "Sentiment: <strong>0.0</strong><br />";
+	}
 	echo "Total Strings Analyzed: <strong>$string_count</strong><br />";
 	echo "Total execution time <strong>$total_time</strong> seconds<br />";
 	echo $limit;
