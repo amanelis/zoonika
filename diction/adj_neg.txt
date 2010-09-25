@@ -63,6 +63,7 @@ disturb
 disturbed
 domineering
 draconian
+dumb
 embarrass
 embarrassing
 embarrassed
@@ -121,6 +122,7 @@ hurted
 hurting
 ignorant
 ill
+isn't
 irresolute
 jealous
 jittery

@@ -284,8 +284,8 @@ function sentimentAnalysis_1($sentence, $user, $search) {
 	
 	echo "|******************START SENTIMENT ANALYSIS REPORT******************|<br />";
 	echo "Scrapping twitter for: <strong><font color=\"blue\">$search</font></strong><br />";
-	echo "Original sentence used: <strong>$sentence</strong><br />";
-	echo "Tokenized sentence used: ";
+	echo "Original sentence: <strong>$sentence</strong><br />";
+	echo "Tokenized sentence: ";
 	for($r = 0; $r < ($ta_sz + 1); $r++)
 		echo "<strong>".$ta_copy_1[$r]."</strong> ";
 	echo "<br />";
