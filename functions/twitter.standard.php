@@ -3,7 +3,7 @@
 
 /*
  * FUNCTION: twitter_search
- * PURPOSE: to grab search results on a keywor from search.twitter.com
+ * PURPOSE: to grab search results on a keyword from search.twitter.com
  *			these results are tweets with certain keywords
  * @PARAMS: 
  *		$search = "your search criteria you want to find on twitter"

@@ -185,7 +185,7 @@ sentiment analysis on it.
 @return: sentiment analysis report
 @params: pass in a sentence, it will tokenize, pass in a search term
 */
-function sentimentAnalysis_1($sentence, $search) {
+function sentimentAnalysis_1($sentence, $user, $search) {
 	if(empty($sentence)){
 		echo 'FUNCTION ERROR: sentimentAnalysis_1($sentence, $search), param array looks to be empty -> $sentence<br />';
 		exit(-1);
@@ -289,6 +289,7 @@ function sentimentAnalysis_1($sentence, $search) {
 	for($r = 0; $r < ($ta_sz + 1); $r++)
 		echo "<strong>".$ta_copy_1[$r]."</strong> ";
 	echo "<br />";
+	echo "Tweet user: <a href=\"http://twitter.com/$user\" target=\"_blank\">$user</a><br />";
 	echo "Pos: <strong><font color='green'>$pos_cnt</font></strong><br />"; 
 	echo "Neg: <strong><font color='red'>$neg_cnt</font></strong><br />";
 	echo "Neu: <strong>$neu_cnt</strong><br />";

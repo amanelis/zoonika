@@ -73,6 +73,8 @@ evasive
 evil
 fade
 faded
+fail
+failure
 fanatical
 fierc
 filthe
@@ -95,6 +97,9 @@ greed
 greedy
 grieve
 grieving
+gross
+grossness
+grossened
 grouch
 grouchy
 gruesome
