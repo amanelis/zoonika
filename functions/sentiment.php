@@ -187,7 +187,11 @@ sentiment analysis on it.
 */
 function sentimentAnalysis_1($sentence, $user, $search) {
 	if(empty($sentence)){
-		echo 'FUNCTION ERROR: sentimentAnalysis_1($sentence, $search), param array looks to be empty -> $sentence<br />';
+		echo 'FUNCTION ERROR: sentimentAnalysis_1($sentence, $user, $search), param array looks to be empty -> $sentence<br />';
+		exit(-1);
+	}
+	if(empty($user)) {
+		echo 'FUNCTION ERROR: sentimentAnalysis_1($sentence, $user, $search), param string user looks to be empty -> $user<br />';
 		exit(-1);
 	}
 	if(empty($search)){
@@ -265,17 +269,21 @@ function sentimentAnalysis_1($sentence, $user, $search) {
 		}
 	}
 	*/
-	if($pos_cnt != 0)
+	
+	if($pos_cnt != 0) {
 		//$sentiment_positive = round((($string_count / $ta_sz) / ($pos_cnt)), 2);
 		$sentiment_positive = round(($ta_sz / $pos_cnt), 2);
-	else
+	} else {
 		$sentiment_positive = 0;
+	}
 
-	if($neg_cnt !=0)
+	if($neg_cnt !=0) {
 		$sentiment_negative = round(($ta_sz / $neg_cnt), 2);
-	else
+	} else {
 		$sentiment_negative = 0;
+	}
 	
+	//Return the twitter API calls left
 	$limit = hourly_hits_left();
 	
 	$time_end = microtime_float();

@@ -20,5 +20,4 @@ require_once('functions/sentiment.php');
 /* MAIN PROGRAM */
 $search = 'tea';
 sendTweets($search);
-
 ?>

@@ -26,16 +26,11 @@ $search = htmlentities($_GET['q']);
 
 if($search != NULL) {
 
-
 	$search_output = twitter_search($search, $result);
 	foreach ($search_output as $term){ 
 		sentimentAnalysis_1($term[tweet], $term[user], $search);
 	}
 
-
 } else {
 	echo "ERROR: you have entered a NULL search<br />";
 }
-
-
-?>

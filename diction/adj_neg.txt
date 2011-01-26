@@ -77,6 +77,8 @@ faded
 fail
 failure
 fanatical
+fatal
+fatality
 fierc
 filthe
 filthy
@@ -122,7 +124,7 @@ hurted
 hurting
 ignorant
 ill
-isn't
+isnt
 irresolute
 jealous
 jittery
